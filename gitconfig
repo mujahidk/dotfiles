@@ -1,0 +1,12 @@
+[user]
+	name = Mujahid Khaleel
+	email = mujahidkhaleel@gmail.com
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --date=short
+	st = status
+	co = commit
+	cos = commit -S
+	ch = checkout
+	df = diff
+	dfs = diff --staged
+	ft = fetch --all
