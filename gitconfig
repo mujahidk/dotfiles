@@ -2,11 +2,17 @@
 	name = Mujahid Khaleel
 	email = mujahidkhaleel@gmail.com
 [alias]
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --date=short
-	st = status
-	co = commit
-	cos = commit -S
+	h = log --pretty=format:'%h %ad | %s%d [%an]' --date=short
+	s = status
+	c = commit
+	cs = commit -S
 	ch = checkout
-	df = diff
-	dfs = diff --staged
-	ft = fetch --all
+	d = diff
+	ds = diff --staged
+	f = fetch --all
+  a = add
+  m = merge
+  p = pull
+  ps = push
+[pull]
+	ff = only
