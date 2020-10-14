@@ -15,6 +15,8 @@ set expandtab
 set autoindent
 set smartindent
 
+" set list listchars=tab:>\ ,trail:-,eol:$
+
 filetype indent on
 
 " Display Customization
