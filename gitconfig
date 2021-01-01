@@ -1,6 +1,8 @@
 [user]
   name = Mujahid Khaleel
   email = mujahidkhaleel@gmail.com
+[core]
+  editor = vi
 [alias]
   h = log --pretty=format:'%h %ad | %s%d [%an]' --date=short
   s = status
@@ -14,5 +16,6 @@
   m = merge
   p = pull
   ps = push
+  l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 [pull]
   ff = only
