@@ -33,4 +33,11 @@ autocmd BufNewFile,BufRead *.hcl set syntax=tf
 
 imap ;so System.out.println();<left><left>
 
+set suffixesadd+=.groovy
+set suffixesadd+=.java
+set suffixesadd+=.yaml
+set suffixesadd+=.yml
+
+set path+=~/Projects/Work/jenkins/jenkins-shared-lib/vars
+
 "map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
