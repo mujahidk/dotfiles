@@ -126,5 +126,5 @@ fi
 export GPG_TTY=$(tty)
 
 # History auto-complete
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
