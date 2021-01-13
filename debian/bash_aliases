@@ -21,9 +21,12 @@ alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 alias md='mkdir -p'
 
 alias g='git'
 
 alias dotfiles="cd ~/Projects/Personal/dotfiles/"
 alias projects="cd ~/Projects/Work/"
+alias wt="curl https://wttr.in/01803"
