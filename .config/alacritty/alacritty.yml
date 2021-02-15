@@ -11,9 +11,6 @@ scrolling:
 
 decorations: none
 
-shell:
-  program: "wsl"
-
 font:
   normal:
     family: Fira Code
@@ -25,6 +22,7 @@ font:
     family: Fira Code
     style: Medium
   use_thin_strokes: false
+  size: 10
 
 colors:
   # Default colors
