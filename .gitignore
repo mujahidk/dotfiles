@@ -5,3 +5,4 @@ Thumbs.db
 .bundle
 log/*
 *.exe
+.config/nvim/*.netrwhist

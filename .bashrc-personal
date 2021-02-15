@@ -1,0 +1,22 @@
+eval "$(starship init bash)"
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# enable TTY for GPG key
+export GPG_TTY=$(tty)
+
+alias vi="nvim"
+alias gc="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
+alias ls='exa --color=auto'
+alias la='exa -a'
+alias ll='exa -la'
+alias l='exa'
+alias l.="ls -A | egrep '^\.'"
+
+# Store machine specific aliases
+if [ -f ~/.local_aliases ]; then
+    . ~/.local_aliases
+fi
+
