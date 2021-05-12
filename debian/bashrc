@@ -106,13 +106,8 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Store machine specific aliases
-if [ -f ~/.local_aliases ]; then
-    . ~/.local_aliases
+if [ -f ~/.bashrc-personal ]; then
+    . ~/.bashrc-personal
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -132,3 +127,5 @@ export GPG_TTY=$(tty)
 # History auto-complete
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+eval "$(starship init bash)"
