@@ -5,8 +5,9 @@ if [ -d $HOME/.cfg ]; then
 	echo 'Directory already exist.'
 else
 	git clone --bare https://github.com/mujahidk/dotfiles.git $HOME/.cfg
-	mv $HOME/.bashr $HOME/.bashrc.bak
- 	mv $HOME/.gitignore $HOME/.gitignore.bak
+	[ ! -f $HOME/.bashrc ] || mv $HOME/.bashrc $HOME/.bashrc.bak
+ 	[ ! -f $HOME/.gitignore ] || mv $HOME/.gitignore $HOME/.gitignore.bak
+ 	[ ! -f $HOME/.gitconfig ] || mv $HOME/.gitconfig $HOME/.gitconfig.bak
 	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
 fi
 
