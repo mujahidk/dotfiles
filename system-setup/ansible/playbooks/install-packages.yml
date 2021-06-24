@@ -44,12 +44,18 @@
         name: alacritty
         classic: yes
       become: yes
+      tags:
+        - snaps
 
     - name: Install packages from snap
       community.general.snap:
-        name: procs
-        classic: yes
+        name: "{{ item }}"
       become: yes
+      loop:
+        - starship
+        - procs
+      tags:
+        - snaps
 
     - name: Install Vim Plug (Plugin manager)
       ansible.builtin.shell: |
