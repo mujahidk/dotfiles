@@ -46,6 +46,7 @@ call plug#begin()
   Plug 'tpope/vim-surround'
 
   Plug 'machakann/vim-highlightedyank'
+  Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 colorscheme PaperColor
@@ -97,6 +98,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <F28> :bd<CR>
+
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 :ab jsl @Library('jenkins-shared-lib@develop') _
 :ab jsb #!/usr/bin/env groovy
