@@ -22,6 +22,15 @@
         - htop
         - 'docker.io'
         - dos2unix
+      tags:
+        - base
+
+    - name: Download and install .deb packages
+      ansible.builtin.apt:
+        deb: https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
+      become: yes
+      tags:
+        - base
 
     - name: Add current user to docker group.
       user:
