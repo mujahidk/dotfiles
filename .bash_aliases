@@ -1,4 +1,4 @@
-alias dots='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dts='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Store machine specific aliases in it's own file.
 if [ -f ~/.local_aliases ]; then
@@ -24,3 +24,6 @@ alias g='git'
 
 alias dotfiles="cd ~/Projects/Personal/dotfiles/"
 alias projects="cd ~/Projects/Work/"
+
+eval "$(starship init bash)"
+
