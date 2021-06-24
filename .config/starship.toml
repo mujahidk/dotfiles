@@ -1,0 +1,12 @@
+add_newline = false
+
+[package]
+disabled = false
+
+[hostname]
+ssh_only = false
+
+[aws]
+format = "on [$symbol$profile]($style) "
+style = "bold blue"
+

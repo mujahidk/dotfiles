@@ -25,5 +25,12 @@ alias g='git'
 alias dotfiles="cd ~/Projects/Personal/dotfiles/"
 alias projects="cd ~/Projects/Work/"
 
+# enable TTY for GPG key
+export GPG_TTY=$(tty)
+
+# History auto-complete
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 eval "$(starship init bash)"
 
