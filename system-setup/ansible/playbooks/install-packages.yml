@@ -20,6 +20,7 @@
         - neofetch
         - ripgrep
         - htop
+        - 'docker.io'
 
     - name: Install packages from snap (classic)
       community.general.snap:
@@ -38,4 +39,19 @@
           curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim \
             --create-dirs \
             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    - name: Create fonts directory for installing fonts like Nerd fonts
+      file:
+        path: "$HOME/.local/share/fonts/nerdfonts"
+        state: directory
+
+    - name: Download fonts
+      ansible.builtin.get_url:
+        url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+        dest: /tmp/FiraCode.zip
+
+    - name: Unzip downloaded font
+      ansible.builtin.unarchive:
+        src: /tmp/FiraCode.zip
+        dest: "$HOME/.local/share/fonts/nerdfonts"
 
