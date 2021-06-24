@@ -5,6 +5,9 @@ if [ -f ~/.local_aliases ]; then
     . ~/.local_aliases
 fi
 
+# Custom bin to store scripts and fun stuff.
+export PATH=~/.local/cbin/:$PATH
+
 alias ll='exa -alF'
 alias la='exa -a'
 alias l='exa -F'
