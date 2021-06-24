@@ -4,7 +4,7 @@
   tasks:
     - name: Welcome to ansible
       ansible.builtin.debug:
-        msg: Welcome to ansible
+        msg: "Welcome to ansible {{ lookup('env', 'USER') }}"
 
     - name: Install apt packages
       ansible.builtin.apt:
@@ -21,6 +21,14 @@
         - ripgrep
         - htop
         - 'docker.io'
+        - dos2unix
+
+    - name: Add current user to docker group.
+      user:
+        name: "{{ lookup('env','USER') }}"
+        groups: docker
+        append: yes
+      become: yes
 
     - name: Install packages from snap (classic)
       community.general.snap:
