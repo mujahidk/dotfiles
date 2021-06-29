@@ -1,4 +1,4 @@
-alias dts='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias d='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Store machine specific aliases in it's own file.
 if [ -f ~/.local_aliases ]; then
