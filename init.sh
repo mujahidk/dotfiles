@@ -8,6 +8,8 @@ else
 	[ ! -f $HOME/.bashrc ] || mv $HOME/.bashrc $HOME/.bashrc.bak
  	[ ! -f $HOME/.gitignore ] || mv $HOME/.gitignore $HOME/.gitignore.bak
  	[ ! -f $HOME/.gitconfig ] || mv $HOME/.gitconfig $HOME/.gitconfig.bak
+
 	/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME  config --local status.showUntrackedFiles no
 fi
 
